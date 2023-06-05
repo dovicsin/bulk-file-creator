@@ -21,7 +21,21 @@ const argsOptions = {
         choices: ['true', 'false'],
         demandOption: true,
         default: 'true'
+    },
+    'header': {
+        alias: 'h',
+        description: 'The source incluse is header',
+        choices: ['true', 'false'],
+        demandOption: true,
+        default: 'true'
+    },
+    'join': {
+        alias: 'j',
+        description: 'The target file content line and header separator',
+        demandOption: true,
+        default: '='
     }
+
 }
 
 const argv = yargs(hideBin(process.argv))
@@ -33,6 +47,8 @@ const argv = yargs(hideBin(process.argv))
 const source = argv['source'];
 const target = argv['target'] + (!argv['target'].endsWith("/") ? "/" : "");
 const createDirs = argv['dirs'] ? argv['dirs'] === "true" : false;
+const header = argv['header'] ? argv['header'] === "true" : false;
+const join = argv['join'] ? argv['join'] : false;
 
 if (!fs.existsSync(target)) {
     fs.mkdirSync(target);
@@ -41,7 +57,7 @@ if (!fs.existsSync(target)) {
 const result = excelToJson({
     sourceFile: source,
     header:{
-        rows: 1
+        rows: header?1:0
     },
     columnToKey: {
         '*': '{{columnHeader}}'
@@ -71,7 +87,7 @@ sheetNames.forEach(name => {
         const name = data.name + (data.extension?`.${data.extension}`: "");
         const writedData = Object.keys(data)
             .filter(key => key !== "name" && key!=="extension" )
-            .map(key => `${key}=${data[key]}`);
+            .map(key => `${key}${join}${data[key]}`);
         fs.writeFileSync(`${filePath}${name}`,  writedData.join("\n"));
         count++;
     })

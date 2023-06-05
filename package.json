@@ -1,7 +1,7 @@
 {
   "name": "@dovicsin/bulk-file-creator",
   "version": "1.0.0",
-  "description": "Create bulk file from table (supported: xlsx,xls,odt)",
+  "description": "Create bulk file from table (supported: xlsx,xls,ods)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,6 +10,9 @@
     "files creator",
     "xlsx"
   ],
+  "bin": {
+    "bulk-file-creator": "index.js"
+  },
   "author": "Tamas Dovicsin <truetomket@gmail.com>",
   "license": "MIT",
   "repository": {
