@@ -1,0 +1,27 @@
+{
+  "name": "@dovicsin/bulk-file-creator",
+  "version": "1.0.0",
+  "description": "Create bulk file from table (supported: xlsx,xls,odt)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "files creator",
+    "xlsx"
+  ],
+  "author": "Tamas Dovicsin <truetomket@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dovicsin/bulk-file-creator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dovicsin/bulk-file-creator/issues"
+  },
+  "homepage": "https://github.com/dovicsin/bulk-file-creator#readme",
+  "dependencies": {
+    "convert-excel-to-json": "^1.7.0",
+    "yargs": "^17.7.2"
+  }
+}
