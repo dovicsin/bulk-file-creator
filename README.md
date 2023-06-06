@@ -29,14 +29,14 @@ bulk-file-creator -s source.xlsx
 ## Source format headers
 
 - `name` - First column contained the file names
-- `extension` - Secound column contained all file extension (not required)
-- Every other column contained file content. The first row value is a line paramter name.
+- `extension` - Second column contained all file extension (not required)
+- Every other column contained file content. The first row value is a line parameter name.
 
 ## Example source (sheet-1)
 | name | extension | TITLE | DESCRIPTION | DATE | ETC |
 |------|-----------|-------|-------------|------|-----|
-| file-1 | txt | First title | Descripiton value | 2023 | etc paramters |
-| file-2 | txt | Sectitle | Descripiton value | 2020 | other |
+| file-1 | txt | First title | Description value | 2023 | etc parameters |
+| file-2 | txt | Second title | Description value | 2020 | other |
 | file-3 | pdf | Pdf title | Pdf  desc | 2024 | ... |
 
 ## Result 
@@ -69,9 +69,9 @@ dist
 ### file-1.txt
 ```
 TITLE=First title
-DESCRIPTION=Descripiton value
+DESCRIPTION=Description value
 DATE=2023
-ETC=etc paramters
+ETC=etc parameters
 ```
 
 ## Example simple content
