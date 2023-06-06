@@ -66,6 +66,23 @@ DATE=2023
 ETC=etc paramters
 ```
 
+## Example simple content
+
+```sh
+bulk-file-creator -s source.xlsx -a false
+```
+
+| name | extension | CONTENT |
+|------|-----------|---------|
+| file-1 | txt | First content \n more lines |
+| file-2 | txt | Sec content |
+| file-3 | txt | Content |
+
+**file-1 final content**
+```text
+First content
+more lines
+```
 
 ## Supported source extensions
 
