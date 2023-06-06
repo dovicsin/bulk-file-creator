@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const yargs = require('yargs');
 const { hideBin } = require('yargs/helpers');
