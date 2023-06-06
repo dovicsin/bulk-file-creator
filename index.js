@@ -31,7 +31,7 @@ const argsOptions = {
     },
     'addheaderkey': {
         alias: 'a',
-        description: 'Add header key in content',
+        description: 'Add header key in content with join separator',
         choices: ['true', 'false'],
         demandOption: true,
         default: 'true'

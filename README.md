@@ -15,7 +15,7 @@ bulk-file-creator -s source.xlsx
 | Source file | --source | -s | None | true | Source file (supported: xlsx, xls, ods) |
 | Target directory | --target | -t | dist/ | false | Target directory when saved all file |
 | Create dirs | --dirs | -d | true | false | Create directory every files |
-| Header | --header | -h | true | false | The source incluse is header |
+| Add header | --addheaderkey | -a | true | false | Add header key in content with join separator |
 | Join | --join | -j | = | false | The target file content line and header separator |
 
 ## Source format headers
