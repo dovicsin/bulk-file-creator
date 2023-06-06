@@ -57,7 +57,7 @@ const source = argv['source'];
 const target = argv['target'] + (!argv['target'].endsWith("/") ? "/" : "");
 const createDirs = argv['dirs'] ? argv['dirs'] === "true" : false;
 const addkey = argv['addheaderkey'] ? argv['addheaderkey'] === "true" : false;
-const join = argv['join'] ? argv['join'] : false;
+const join = argv['join'];
 
 if (!fs.existsSync(target)) {
     fs.mkdirSync(target);
@@ -72,7 +72,7 @@ const result = excelToJson({
         '*': '{{columnHeader}}'
     }
 });
-console.info("Excel beolvasva.")
+console.info("Table read is complete.")
 
 const sheetNames = Object.keys(result);
 let count = 0;
@@ -102,5 +102,5 @@ sheetNames.forEach(name => {
     })
 });
 
-console.log(`Kész. Létrehozva ${sheetNames.length}db könyvtár (${sheetNames.join(", ")}) benne ${count}db állomány.`)
+console.info(`Finish. Created ${sheetNames.length} main libraries (${sheetNames.join(", ")}) and ${count} files.`)
 
