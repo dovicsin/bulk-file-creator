@@ -83,7 +83,7 @@ sheetNames.forEach(name => {
 
     result[name].forEach(data => {
         if (!data.name) {
-            console.error("Hiányzó név tulajdonság!")
+            console.error("Missing name attribute!")
             return;
         }
         let filePath = fileDir; 
