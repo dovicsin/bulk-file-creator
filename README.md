@@ -1,6 +1,14 @@
 # Bulk file creator
 
-Generate more file when you use the excel or other table creator app. You create the xlsx,xls or ods file and generate new files with content from every row. 
+Create bulk files with or without structured directories. Be it a configuration file or a plain text file. 
+
+The source should be a plain table that contains the header and beyond that each row will be a separate file. Just parameterize it with the appropriate flags and you're ready with lots of new files.
+
+## Install
+
+```sh
+npm install --global @dovicsin/bulk-file-creator
+```
 
 ## Usage
 
