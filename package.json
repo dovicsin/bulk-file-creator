@@ -1,6 +1,6 @@
 {
   "name": "@dovicsin/bulk-file-creator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create bulk file from table (supported: xlsx,xls,ods)",
   "main": "index.js",
   "scripts": {
