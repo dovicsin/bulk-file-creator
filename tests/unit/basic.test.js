@@ -4,7 +4,7 @@ import fs from 'fs';
 
 describe('bulk-file-creator basic CLI', () => {
   it('Check if index.js exists', () => {
-    expect(fs.existsSync('index.js')).toBe(true);
+    expect(fs.existsSync('index_borke.js')).toBe(true);
   });
 
   it('CLI can be started without help (no error)', () => {
